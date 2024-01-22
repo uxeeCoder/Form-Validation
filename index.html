@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation Page</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header>
+      <h1>Form Validation Test Page</h1>
+    </header>
+<main>
+
+    <h2>Username Verification</h2>
+    <!-- Addinng Username and Password Validation with minimum length of 5 and 8 respectively, including
+    one uppercase, one lowercase and one digit requirment. -->
+    <form>
+      <label aria-label="Enter Username">
+          Username:
+          <input
+          type="text"
+          name="username"
+          placeholder="Enter Username"
+          minlength="5"
+          required
+          />
+        </label>
+        <label aria-label="Enter Password">
+            Password:
+            <input
+            type="password"
+            name="password"
+            placeholder="Enter Password"
+            minlength="8"
+          pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+          required
+          />
+          <!-- Above regex enforces these password requirements:
+            Minimum length 8 characters
+            Must contain at least one digit
+            Must contain at least one lowercase letter
+            Must contain at least one uppercase letter -->
+        </label>
+        <button>Submit</button>
+    </form>
+    <h2>Email and Zip Code Verification</h2>
+    <!-- Adding Email and Zip Code Validation with minimum length of 5 for zip and 
+        email must be in correct format. -->
+        <form>
+            <label aria-label="Enter email">
+                Email:
+                <input type="email" name="email" placeholder="Enter email" required />
+            </label>
+            <label aria-label="Enter Zip code">
+                Zip Code:
+                <input
+                type="text"
+                name="zip"
+                placeholder="Enter Zip Code"
+                pattern="[0-9]{5}"
+                required
+                />
+            </label>
+      <button>Submit</button>
+    </form>
+    <script src="script.js"></script>
+</main>
+</body>
+</html>

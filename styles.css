@@ -1,0 +1,39 @@
+header{
+    background-color: #303c03;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Times New Roman', Times, serif;
+    box-shadow: inset 5px -5px 5px 3px rgba(249, 247, 247, 0.75);
+}
+main{ display: flex;
+flex-direction: column;
+align-items: center;}
+
+input{
+    width: 400px;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid rgb(59, 57, 57);
+    padding: 5px;
+    margin-top: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+button{
+    background-color: #303c03;
+    color: white;
+    padding: 3px;
+    text-align: center;
+    font-family:'Courier New', Courier, monospace;
+    border-radius: 5px;
+    margin: 15px;
+    cursor: pointer;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
